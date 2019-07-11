@@ -1,0 +1,89 @@
+.bee {
+	perspective: 1000px;
+	padding-top: 15px;/*
+	height:1000px;
+	width:1000px;*/
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.blue-eyes .eye-color{
+	fill: #175282;
+}
+
+.sad .mouth {
+	transform: rotate(180deg) scale(.8);
+    transform-origin: 346px 146px;
+}
+@keyframes moveEyes{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	50%{
+		transform: translate(0px, -20px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
+.move-around .inner-eye-group {
+	animation: moveEyes 5s infinite;
+}
+
+@keyframes leftWing {
+	20% {
+		transform: rotateX(25deg);
+	}
+	60%{
+		transform:rotateX(-25deg);
+	}
+}
+
+.move-around .left-Wing {
+	animation: leftWing 3s infinite;
+	transform-origin: 191px 373px;
+}
+
+@keyframes rightWing {
+	20% {
+		/*transform: rotate(5deg);*/
+		transform: rotateX(25deg);
+
+	}
+	60%{
+		/*transform:rotate(-5deg);*/
+		transform: rotateX(-25deg);
+	}
+}
+
+.move-around .right-Wing {
+	animation: leftWing 3s infinite;
+	transform-origin: 191px 373px;
+}
+
+
+@keyframes move {
+	20% {
+		transform: rotateY(10deg) rotateX(10deg);
+	}
+	40% {
+		transform: rotateY(25deg) rotateX(10deg);
+	}
+	60% {
+		transform: rotateY(-10deg) rotateX(-10deg);
+	}
+	85% {
+		transform: rotateY(-10deg) rotateX(16deg);
+	}
+}
+.move-around {
+	animation: move 8s infinite;
+}
